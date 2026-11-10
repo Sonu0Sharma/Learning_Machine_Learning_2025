@@ -1,0 +1,133 @@
+Here's a step-by-step guide on how to set up two separate virtual environments and use them within Jupyter Notebook to run pandas-profiling and ydata-profiling in their own notebooks.
+
+Step 1: Install venv and ipykernel
+First, you need to make sure you have the necessary tools installed. venv is typically included with Python 3.3+, and ipykernel is what allows Jupyter to see your virtual environments.
+
+Open your terminal (or Anaconda Prompt if you're using Anaconda) and run:
+
+Bash
+
+pip install ipykernel
+Step 2: Create Virtual Environments
+Now, let's create two separate virtual environments. I'll name one pandas-prof-env and the other ydata-prof-env.
+
+a. Create the pandas-prof-env virtual environment:
+
+Bash
+
+python -m venv pandas-prof-env
+b. Activate the environment:
+
+On Windows:
+
+Bash
+
+pandas-prof-env\Scripts\activate
+On macOS/Linux:
+
+Bash
+
+source pandas-prof-env/bin/activate
+c. Install the required libraries in this environment:
+
+Since this environment will use the older pandas-profiling, we need to install a compatible version of numba and llvmlite first, and then pandas-profiling.
+
+Bash
+
+pip install numba==0.58.1 llvmlite==0.41.0
+pip install pandas-profiling
+pip install pandas jupyter
+d. Register the environment with Jupyter:
+
+Now, tell Jupyter that this new environment is an available kernel.
+
+Bash
+
+python -m ipykernel install --user --name=pandas-prof-env --display-name="Pandas Profiling Env"
+e. Deactivate this environment:
+
+Bash
+
+deactivate
+f. Create the ydata-prof-env virtual environment:
+
+Bash
+
+python -m venv ydata-prof-env
+g. Activate this environment:
+
+On Windows:
+
+Bash
+
+ydata-prof-env\Scripts\activate
+On macOS/Linux:
+
+Bash
+
+source ydata-prof-env/bin/activate
+h. Install the required libraries in this new environment:
+
+This one is simpler because ydata-profiling is compatible with the latest libraries.
+
+Bash
+
+pip install ydata-profiling
+pip install pandas jupyter
+i. Register the environment with Jupyter:
+
+Bash
+
+python -m ipykernel install --user --name=ydata-prof-env --display-name="YData Profiling Env"
+j. Deactivate this environment:
+
+Bash
+
+deactivate
+Step 3: Use the Virtual Environments in Jupyter Notebook
+Start your Jupyter Notebook or JupyterLab from your base environment.
+
+Bash
+
+jupyter notebook
+When you create a new notebook, you will see an option to select the kernel.
+
+Click New in the top right corner.
+
+You should now see "Pandas Profiling Env" and "YData Profiling Env" as options.
+
+For pandas-profiling:
+
+Create a new notebook and select "Pandas Profiling Env" as the kernel.
+
+In this notebook, you can now run your old code without the AttributeError:
+
+Python
+
+import pandas as pd
+from pandas_profiling import ProfileReport
+
+# Create a sample DataFrame
+data = {'col1': [1, 2, 3], 'col2': ['A', 'B', 'C']}
+titanic = pd.DataFrame(data)
+
+prof = ProfileReport(titanic)
+prof.to_file(output_file='pandas_profiling_report.html')
+For ydata-profiling:
+
+Create another new notebook and select "YData Profiling Env" as the kernel.
+
+In this notebook, use the new code syntax:
+
+Python
+
+import pandas as pd
+from ydata_profiling import ProfileReport
+
+# Create a sample DataFrame
+data = {'col1': [1, 2, 3], 'col2': ['A', 'B', 'C']}
+titanic = pd.DataFrame(data)
+
+prof = ProfileReport(titanic)
+prof.to_file(output_file='ydata_profiling_report.html')
+By following these steps, you can keep both libraries and their dependencies completely separate, ensuring that the older pandas-profiling code works in its own dedicated environment while the newer ydata-profiling runs correctly with up-to-date libraries in its own.

@@ -1,0 +1,5 @@
+Link for Fortune 500 :
+ https://www.kaggle.com/datasets/vineetjaiswal/fortune500-2017
+
+Link for Bat's Man dataset :
+ https://www.kaggle.com/datasets/manasgarg/ipl

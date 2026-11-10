@@ -1,0 +1,104 @@
+This code is designed to fetch the content of a web page using Python's requests library, specifically tailored to bypass some common anti-scraping measures that websites like AmbitionBox might employ.
+
+import requests
+import time # Import for potential future use with delays
+import random # Import for potential future use with random delays
+
+import requests: This line imports the requests library, which is a popular and easy-to-use HTTP library for Python. It allows you to send HTTP requests (like GET, POST, etc.) and handle their responses.
+
+import time: This imports the time module, which provides functions for working with time, including time.sleep().
+
+import random: This imports the random module, which provides functions for generating random numbers. We use it with time.sleep() to create varied delays.
+
+# Your provided User-Agent string
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Referer': 'https://www.ambitionbox.com/', # Pretend we came from their homepage
+    'DNT': '1', # Do Not Track request header
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'same-origin',
+    'Sec-Fetch-User': '?1',
+}
+
+headers = {...}: This dictionary defines the HTTP headers that will be sent along with your request. HTTP headers provide additional information about the request to the server. Websites often inspect these headers to determine if the request is coming from a legitimate web browser or an automated script.
+
+'User-Agent': This is arguably the most important header for basic web scraping. It tells the server what kind of client (browser, operating system, etc.) is making the request. We used your specific, up-to-date User-Agent for Chrome on Mac to make the request appear as if it's coming from a real browser. Without this, requests sends a default User-Agent (like python-requests/X.X.X), which is easily identifiable as a bot and often blocked.
+
+'Accept': Specifies the media types that the client is willing to accept in the response (e.g., HTML, XML, images). This mimics what a browser would send.
+
+'Accept-Language': Indicates the preferred natural languages for the response.
+
+'Referer': This header tells the server the URL of the page that linked to the current request. By setting it to https://www.ambitionbox.com/, we're pretending that our request for the "list of companies" page originated from their homepage, which can make it seem more natural to the server.
+
+'DNT': "Do Not Track" header.
+
+'Connection': Specifies whether the network connection should be kept open after the current transaction finishes. keep-alive is standard for browsers.
+
+'Upgrade-Insecure-Requests': A header sent by browsers indicating that they prefer a secure (HTTPS) response.
+
+'Sec-Fetch-Dest', 'Sec-Fetch-Mode', 'Sec-Fetch-Site', 'Sec-Fetch-User': These are newer "Fetch Metadata" headers that provide more context about how the request was initiated and its relationship to the document. They are part of modern browser security and can help prevent cross-site attacks, but also contribute to a more "browser-like" fingerprint. Including them makes your request less distinguishable from a real browser's.
+
+url = "https://www.ambitionbox.com/list-of-companies?page=1"
+
+print(f"Attempting to fetch {url} with custom headers...")
+
+url = "...": This simply defines the target URL you want to scrape.
+
+print(...): A basic print statement to give you feedback in your console or Jupyter output, indicating that the script is starting the fetching process.
+
+try:
+    # Set a timeout (e.g., 15 seconds) to prevent indefinite hanging
+    # Adding a small, random delay before the request can sometimes help
+    time.sleep(random.uniform(1, 3)) # Wait between 1 and 3 seconds
+
+    webpage = requests.get(url, headers=headers, timeout=15)
+    webpage.raise_for_status() # Raise an exception for HTTP errors (4xx or 5xx)
+
+    print("Page content successfully retrieved!")
+    # Print a snippet of the text to confirm success
+    print(webpage.text[:500])
+
+except requests.exceptions.Timeout:
+    print(f"Error: The request timed out after 15 seconds while trying to reach {url}.")
+    print("This indicates the server is very slow, or it's actively blocking/throttling the request.")
+except requests.exceptions.HTTPError as e:
+    print(f"Error: HTTP Status Code {e.response.status_code} received from {url}.")
+    print(f"Response content: {e.response.text[:200]}...") # Print part of the error response
+    print("This means the server understood the request but refused to fulfill it (e.g., 403 Forbidden).")
+except requests.exceptions.ConnectionError as e:
+    print(f"Error: Could not connect to {url}. This could be a DNS issue, an unreachable host, or a firewall problem.")
+except requests.exceptions.RequestException as e:
+    print(f"An unexpected error occurred: {e}")
+
+try...except block: This is crucial for robust programming, especially in web scraping, where network issues or server blocks are common.
+
+time.sleep(random.uniform(1, 3)): Before making the actual request, the script pauses for a random duration between 1 and 3 seconds. This helps to mimic human browsing behavior (humans don't click instantly) and can help avoid rate-limiting or bot detection that flags overly consistent or rapid requests.
+
+webpage = requests.get(url, headers=headers, timeout=15): This is the core of the request.
+
+requests.get(url): Sends an HTTP GET request to the specified url.
+
+headers=headers: Attaches the custom headers dictionary we defined earlier to the request.
+
+timeout=15: This is very important. It sets a maximum waiting time (in seconds) for the server to send a response. If the server doesn't respond within 15 seconds, a requests.exceptions.Timeout error is raised, preventing your script from hanging indefinitely.
+
+webpage.raise_for_status(): After receiving a response, this method checks if the HTTP status code indicates an error (i.e., a 4xx client error or 5xx server error). If it does, it raises an HTTPError exception. This is a quick way to catch issues like 403 Forbidden or 404 Not Found.
+
+print("Page content successfully retrieved!"): If the request is successful and no HTTP error occurs, this message is printed.
+
+print(webpage.text[:500]): webpage.text contains the entire HTML content of the fetched page as a string. We print only the first 500 characters to confirm that we received HTML data without cluttering the output.
+
+except requests.exceptions.Timeout as e:: This block catches the Timeout exception, which occurs if the server doesn't respond within the specified timeout duration.
+
+except requests.exceptions.HTTPError as e:: This block catches HTTPError exceptions, which are raised by raise_for_status() for bad HTTP status codes (like the 403 Forbidden you encountered earlier). It also prints the specific status code and a snippet of the server's error response.
+
+except requests.exceptions.ConnectionError as e:: This catches errors related to network connectivity issues (e.g., DNS resolution failure, host unreachable).
+
+except requests.exceptions.RequestException as e:: This is a general catch-all for any other exception that might occur during the requests operation. RequestException is the base class for all exceptions in the requests library.
+
+In summary, this code attempts to fetch a web page by mimicking a real browser's request as closely as possible, includes safeguards against indefinite hangs, and provides informative error messages if the request fails. The success you achieved indicates that these combined strategies were effective when running from your local machine.

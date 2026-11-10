@@ -1,0 +1,201 @@
+name,gender,city,frequency,item,spends
+Ira,M,Pune,monthly,Pasta,821.98
+Dhruv,F,Hyderabad,monthly,Taco,1402.86
+Aadhya,M,Kolkata,monthly,Taco,388.96
+Rohan,F,Jaipur,daily,Wrap,456.42
+Myra,M,Chandigarh,once,Pasta,142.34
+Aarav,F,Bangalore,once,Pizza,196.19
+Vivaan,F,Ahmedabad,never,Burger,578.29
+Sai,M,Bangalore,monthly,Noodles,468.34
+Dhruv,M,Bangalore,monthly,Wrap,378.45
+Avni,M,Delhi,once,Spring Roll,842.76
+Aadhya,F,Bangalore,daily,Burger,1173.98
+Ishaan,F,Jaipur,monthly,Pizza,297.27
+Saanvi,F,Delhi,daily,Momos,1026.44
+Ishaan,F,Delhi,daily,Hot Dog,1031.26
+Dhruv,M,Mumbai,daily,Hot Dog,505.08
+Pari,F,Jaipur,daily,Burrito,810.59
+Krishna,M,Chandigarh,daily,Fries,258.03
+Krishna,M,Hyderabad,never,Fries,842.75
+Rohan,F,Chandigarh,monthly,Noodles,1447.09
+Diya,M,Pune,daily,Pasta,733.29
+Rohan,F,Pune,daily,Sandwich,1315.49
+Ira,F,Chennai,weekly,Hot Dog,549.67
+Dhruv,M,Pune,daily,Fries,720.99
+Avni,F,Delhi,once,Sandwich,812.86
+Vihaan,F,Chennai,monthly,Pizza,207.21
+Saanvi,M,Ahmedabad,once,Momos,734.01
+Ira,F,Chandigarh,once,Samosa,451.35
+Ishaan,M,Hyderabad,weekly,Spring Roll,1149.42
+Pari,M,Pune,monthly,Noodles,402.35
+Meera,M,Delhi,never,Pasta,526.23
+Anaya,F,Chennai,monthly,Noodles,466.52
+Arjun,F,Delhi,once,Fries,1450.54
+Arjun,M,Hyderabad,daily,Hot Dog,1336.75
+Ira,M,Delhi,monthly,Momos,1303.87
+Aarav,F,Kolkata,monthly,Fries,1487.85
+Arjun,M,Delhi,weekly,Samosa,1420.44
+Myra,F,Mumbai,never,Burrito,1409.66
+Aadhya,M,Chandigarh,weekly,Pasta,1188.01
+Myra,M,Bangalore,weekly,Spring Roll,853.64
+Rohan,M,Jaipur,daily,Fries,1165.27
+Ishaan,M,Bangalore,monthly,Burger,1273.59
+Diya,M,Kolkata,daily,Wrap,1064.27
+Pari,F,Bangalore,once,Hot Dog,295.48
+Ira,F,Kolkata,never,Wrap,469.95
+Vivaan,F,Ahmedabad,monthly,Burger,1118.23
+Pari,F,Jaipur,weekly,Noodles,129.43
+Myra,M,Ahmedabad,weekly,Burger,495.78
+Anaya,M,Chennai,never,Sandwich,284.33
+Avni,F,Delhi,never,Wrap,219.29
+Vihaan,M,Chandigarh,monthly,Pizza,340.83
+Anaya,M,Chandigarh,weekly,Burrito,1311.1
+Anaya,F,Mumbai,daily,Spring Roll,252.44
+Krishna,M,Ahmedabad,monthly,Pasta,1396.45
+Pari,F,Mumbai,weekly,Momos,1112.34
+Vihaan,M,Bangalore,never,Momos,446.56
+Aadhya,F,Chandigarh,never,Noodles,1424.26
+Avni,M,Chandigarh,weekly,Taco,1485.6
+Aditya,F,Kolkata,once,Samosa,1312.12
+Avni,M,Ahmedabad,daily,Momos,515.3
+Arjun,M,Delhi,monthly,Burger,1175.34
+Aadhya,F,Chennai,daily,Fries,858.13
+Vihaan,M,Chennai,once,Wrap,1310.99
+Sai,M,Kolkata,never,Pasta,1264.37
+Saanvi,M,Mumbai,once,Sandwich,1484.45
+Saanvi,F,Pune,weekly,Pasta,1375.79
+Myra,M,Ahmedabad,never,Hot Dog,1240.93
+Pari,M,Mumbai,daily,Spring Roll,87.75
+Anaya,M,Delhi,daily,Momos,83.19
+Sai,F,Mumbai,weekly,Burger,1284.08
+Arjun,M,Hyderabad,weekly,Dosa,94.88
+Dhruv,M,Chennai,monthly,Samosa,242.11
+Myra,M,Jaipur,daily,Samosa,99.47
+Ishaan,F,Ahmedabad,monthly,Noodles,952.4
+Siya,F,Delhi,never,Hot Dog,858.26
+Sai,M,Mumbai,daily,Taco,1150.87
+Ira,F,Jaipur,weekly,Noodles,1163.81
+Ishaan,M,Pune,never,Spring Roll,583.21
+Arjun,F,Chennai,once,Pizza,1171.29
+Meera,F,Chennai,never,Pizza,674.5
+Ira,M,Pune,daily,Wrap,1247.89
+Ira,F,Chennai,never,Burger,463.72
+Saanvi,F,Mumbai,monthly,Wrap,834.55
+Ishaan,F,Mumbai,daily,Noodles,1247.38
+Ishaan,M,Bangalore,monthly,Hot Dog,539.17
+Aadhya,M,Ahmedabad,once,Burger,1281.66
+Meera,M,Chandigarh,weekly,Burger,433.4
+Avni,F,Delhi,once,Samosa,317.22
+Krishna,F,Kolkata,weekly,Pasta,556.98
+Pari,F,Bangalore,never,Pasta,1123.72
+Arjun,F,Ahmedabad,once,Dosa,1383.76
+Sai,F,Hyderabad,once,Wrap,692.12
+Saanvi,M,Bangalore,never,Taco,643.52
+Aarav,M,Bangalore,weekly,Burrito,450.12
+Avni,F,Delhi,weekly,Burrito,379.14
+Vihaan,M,Pune,never,Noodles,1169.73
+Rohan,M,Hyderabad,once,Samosa,453.11
+Arjun,F,Ahmedabad,monthly,Pizza,1437.23
+Siya,M,Bangalore,never,Dosa,142.73
+Anaya,F,Delhi,once,Hot Dog,1335.14
+Meera,F,Hyderabad,never,Dosa,1363.96
+Ishaan,M,Delhi,daily,Pasta,1078.08
+Siya,M,Pune,weekly,Taco,1246.85
+Saanvi,F,Jaipur,weekly,Burrito,1275.16
+Ira,M,Jaipur,once,Burger,193.3
+Arjun,M,Chandigarh,monthly,Burger,686.07
+Meera,F,Ahmedabad,weekly,Sandwich,364.74
+Rohan,M,Delhi,never,Taco,1474.89
+Anaya,M,Bangalore,never,Dosa,154.34
+Krishna,M,Chandigarh,once,Momos,347.24
+Myra,F,Ahmedabad,weekly,Samosa,317.98
+Ishaan,M,Bangalore,once,Momos,1212.75
+Sai,F,Pune,never,Burrito,1269.9
+Krishna,F,Bangalore,monthly,Hot Dog,224.96
+Vivaan,M,Chandigarh,monthly,Fries,557.57
+Pari,M,Jaipur,once,Sandwich,972.26
+Siya,F,Chandigarh,monthly,Pasta,276.2
+Anaya,M,Hyderabad,once,Wrap,1063.69
+Pari,F,Jaipur,once,Fries,538.76
+Aditya,M,Jaipur,weekly,Fries,287.17
+Pari,M,Delhi,monthly,Burger,837.06
+Myra,F,Jaipur,once,Samosa,1213.03
+Anaya,M,Chennai,once,Burrito,715.08
+Vivaan,F,Hyderabad,daily,Burger,1230.29
+Pari,M,Bangalore,weekly,Samosa,1402.13
+Ishaan,M,Chandigarh,monthly,Pasta,339.71
+Rohan,M,Delhi,weekly,Sandwich,1089.08
+Diya,F,Chennai,weekly,Sandwich,309.57
+Aditya,F,Delhi,once,Spring Roll,99.72
+Siya,F,Pune,daily,Wrap,50.56
+Rohan,M,Ahmedabad,weekly,Pasta,1497.24
+Saanvi,F,Chandigarh,daily,Burrito,346.67
+Meera,F,Chandigarh,never,Hot Dog,63.02
+Vivaan,F,Hyderabad,never,Spring Roll,946.71
+Ira,M,Bangalore,monthly,Samosa,1192.15
+Arjun,F,Mumbai,weekly,Hot Dog,183.5
+Siya,M,Jaipur,monthly,Taco,980.48
+Pari,F,Kolkata,monthly,Noodles,1046.09
+Arjun,F,Delhi,daily,Noodles,1299.53
+Saanvi,M,Chandigarh,weekly,Taco,822.18
+Krishna,F,Hyderabad,never,Burger,1120.84
+Meera,F,Pune,daily,Noodles,951.8
+Siya,M,Chandigarh,once,Taco,1097.07
+Krishna,M,Pune,monthly,Taco,914.84
+Aditya,F,Ahmedabad,monthly,Samosa,1068.85
+Diya,M,Chandigarh,daily,Burrito,975.97
+Myra,F,Jaipur,daily,Dosa,1291.68
+Saanvi,M,Ahmedabad,daily,Noodles,91.68
+Krishna,M,Jaipur,daily,Burger,681.07
+Vihaan,F,Jaipur,weekly,Momos,1197.81
+Arjun,M,Hyderabad,once,Samosa,834.72
+Anaya,F,Chandigarh,never,Sandwich,873.94
+Siya,M,Mumbai,once,Spring Roll,267.64
+Arjun,F,Bangalore,monthly,Burrito,456.49
+Krishna,M,Mumbai,once,Burger,476.81
+Meera,M,Delhi,monthly,Momos,585.52
+Arjun,F,Delhi,weekly,Hot Dog,479.89
+Aditya,F,Delhi,monthly,Spring Roll,879.39
+Saanvi,F,Delhi,once,Wrap,508.41
+Aditya,F,Kolkata,once,Burger,981.75
+Diya,M,Hyderabad,once,Burrito,1332.53
+Meera,M,Ahmedabad,daily,Hot Dog,832.14
+Sai,M,Ahmedabad,never,Sandwich,399.87
+Aarav,M,Delhi,daily,Noodles,432.73
+Siya,M,Hyderabad,never,Noodles,375.45
+Vihaan,F,Chandigarh,never,Wrap,686.34
+Vihaan,M,Mumbai,daily,Noodles,1141.38
+Rohan,M,Mumbai,monthly,Noodles,152.49
+Pari,M,Pune,daily,Burger,248.43
+Diya,F,Delhi,daily,Burger,1234.56
+Aarav,M,Mumbai,once,Sandwich,421.64
+Saanvi,M,Bangalore,never,Fries,553.27
+Aadhya,F,Ahmedabad,daily,Spring Roll,1457.62
+Krishna,F,Jaipur,monthly,Pizza,876.19
+Pari,M,Pune,weekly,Fries,1330.18
+Anaya,F,Jaipur,monthly,Pizza,1227.35
+Rohan,F,Jaipur,never,Noodles,795.15
+Sai,F,Ahmedabad,monthly,Burrito,1312.58
+Aditya,M,Hyderabad,never,Burrito,745.92
+Vivaan,F,Delhi,weekly,Dosa,831.83
+Ira,M,Jaipur,never,Burger,1218.92
+Vihaan,M,Pune,never,Dosa,510.7
+Myra,M,Bangalore,monthly,Noodles,746.9
+Ira,F,Chandigarh,never,Burger,274.2
+Saanvi,F,Bangalore,daily,Burrito,862.06
+Vihaan,M,Jaipur,monthly,Fries,1022.89
+Diya,F,Chennai,once,Taco,1266.1
+Saanvi,M,Delhi,weekly,Burger,948.07
+Aditya,F,Jaipur,once,Burger,221.24
+Saanvi,F,Hyderabad,weekly,Pizza,1242.97
+Ishaan,M,Delhi,once,Burrito,201.39
+Dhruv,M,Ahmedabad,never,Dosa,774.35
+Diya,F,Mumbai,once,Samosa,1252.06
+Arjun,M,Jaipur,weekly,Sandwich,1116.95
+Vivaan,F,Pune,once,Pizza,97.01
+Diya,F,Pune,monthly,Wrap,983.17
+Aditya,M,Chandigarh,weekly,Taco,1396.52
+Arjun,M,Kolkata,never,Burger,1114.38
+Vivaan,F,Mumbai,daily,Fries,179.51
+Ira,M,Pune,monthly,Sandwich,504.82
+Myra,M,Hyderabad,never,Wrap,268.75

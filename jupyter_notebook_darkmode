@@ -1,0 +1,12 @@
+## Dark mode code for perfect dark mode for me :
+
+jt -t chesterish -N -T -kl -f roboto -fs 12 -ofs 11 -tfs 12 -cellw 85% -lineh 90 -nfs 11
+
+## To get out of dark mode :
+
+jt -r
+
+## to see all theme commands and explore :
+
+Jt -h
+

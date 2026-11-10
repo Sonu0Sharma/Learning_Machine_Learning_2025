@@ -1,0 +1,34 @@
+Steps to fetch data from API:
+
+1. search "website_name api"
+2. then first link will be of developers.website_name.___com
+
+3. then on left or right side navigate the sections and select the one which type of data you want , there will be different api in each section and they will give data of that perticular section only ,
+
+4. after selecting the section , go to "try it out" or the api will be infront only
+
+5. copy that api ,
+exapmle :
+
+search - 'tmdb api'
+
+first link - https://developer.themoviedb.org/docs/getting-started
+
+'movies' section --> 'Get Top raited' section
+
+'Get Top raited' --> 'Try it out' --> API link 
+
+'http://api.themoviedb.org/3/movie/top_rated?api_key=<<api_key>>&language=en-US&page=1'
+
+we will paste this api at browser and fill the <<api_key>> with our own api key
+
+to get this key -> login to the page 'themoviedb.org'
+--> 'profile and setting ' --> 'settings' --> left side bar 'API' section .
+
+'API' section --> you will see the api key there
+
+paste it there is the api link you opend in another tab
+
+// you will get the json data
+copy paste this data at : jsonviewer website
+
